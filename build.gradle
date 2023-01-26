@@ -1,0 +1,35 @@
+plugins {
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.azure', name: 'azure-core', version: '1.34.0'
+    implementation group: 'com.azure', name: 'azure-identity', version: '1.7.2'
+    implementation group: 'com.azure', name: 'azure-messaging-eventhubs', version: '5.15.0'
+
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.10'
+}
+
+application {
+    mainClass = "com.sap.eventhubs.Main"
+    run {
+        systemProperty "tenant_id", System.getProperty("tenant_id")
+        systemProperty "client_id", System.getProperty("client_id")
+        systemProperty "client_secret", System.getProperty("client_secret")
+        systemProperty "eh_fdqn", System.getProperty("eh_fdqn")
+        systemProperty "eh_name", System.getProperty("eh_name")
+        systemProperty "consumer_group", System.getProperty("consumer_group")
+        systemProperty "consumer_group", System.getProperty("consumer_group")
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

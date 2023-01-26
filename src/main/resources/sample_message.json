@@ -1,0 +1,8 @@
+{
+  "data": {
+    "event": {
+      "name": "Java-Producer-Event-Name",
+      "description": "This is a sample message description"
+    }
+  }
+}
