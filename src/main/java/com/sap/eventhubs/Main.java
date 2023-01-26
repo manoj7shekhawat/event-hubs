@@ -1,9 +1,8 @@
 package com.sap.eventhubs;
 
 /**
- * @author I566958
+ * @author manoj7shekhawat
  * Date: 14/12/2022
- * SAP SE
  */
 
 import com.azure.core.credential.TokenCredential;
